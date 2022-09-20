@@ -1,0 +1,19 @@
+<html>
+<meta charset="UTF-8" />
+<title>TestPage</title>
+<script>
+var cejs_wiki_node = document.createElement("script");
+cejs_wiki_node.setAttribute('src', 'CeJS_wiki.js');
+cejs_wiki_node.setAttribute('type', 'text/javascript');
+document.head.appendChild(cejs_wiki_node);
+
+if (!window.CeL) window.CeL = { initializer : function() { CeL.run('application.net.wiki', initialization); } };
+function initialization() {
+	console.trace(CeL.wiki.parse(`[[A|a]]`));
+}
+</script>
+</head>
+<body>
+Please open the console to see the result.
+</body>
+</html>
